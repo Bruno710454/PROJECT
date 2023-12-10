@@ -6,11 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="corpo">
     <header>
         <ul>
             <li>
-                <a href=""  class="ho">Adicionar</a>
+                <a href="#sobre"  class="ho">Sobre</a>
             </li>
         </ul>
         <ul>
@@ -20,11 +20,9 @@
         </ul>
         <ul>
             <li class="menu">
-            <a href="" onmouseenter="entra()" onmouseleave="sair()">    
-                <img src="icons8-user-24.png" alt="entrar">
-            </a>
+                <button class="ho-btn" onclick="login()" id="me1">Entrar</button>
                 <ul class="lista" id="sub" onmouseenter="entra()" onmouseleave="sair()">
-                    <li>entrar</li>
+                    <li>Sair</li>
                 </ul>
             </li>
         </ul>
@@ -100,7 +98,7 @@
             </section>
         </div>
     </section>
-    <article>
+    <article id="sobre">
         <div>
             <h1 id="p" style="font-weight: lighter;">Como funciona o método de repetição espaçada?</h1>
         </div>
@@ -143,6 +141,32 @@
             </div>
         </div>
     </footer>
+    <div class="popup" id="pop">
+        <div class="login">
+            <div class="fe">
+                <p style="color: #42b6ca; font-weight: bolder;" >Email</p>
+                <div onclick="clos()">
+                    <img src="fechar-simbolo-de-botao-circular.png" alt="">
+                </div>
+            </div>
+            <div>
+                <input type="email" class="in" style="color: #060606;">
+            </div>
+            <div>
+                <p style="color: #42b6ca; font-weight: bolder;">Senha</p>
+            </div>
+            <div>
+                <input type="password" class="in"  style="color: #060606;">
+            </div>
+            <div style="text-align: center;">
+                <small><a href="index2.html" style="margin-left: -20px; color: #42b6ca " >Clique aqui</a></small>
+                <small style="margin-left: -20px; color: #000000;">para se cadastrar</small>
+            </div>
+            <div class="btn-en" onclick="ente()">
+                <button class="btn-entrar">entrar</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
@@ -163,5 +187,43 @@
         id.style.transition='1s';
 
     }
+
+    function login(){
+        var po = document.getElementById('pop');
+        var corpo = document.getElementById('corpo');
+        var s2 = document.getElementById('me1')
+        if(s2.innerHTML=='Sair'){
+            window.alert('Deslogado com sucesso')
+            s2.innerHTML='Entrar'
+        }else {
+            corpo.style.overflow='hidden'
+            po.style.display='block';
+            po.style.display='flex';
+            po.style.flexDirection='column';
+            po.style.justifyContent='center'
+            po.style.alignItems='center'
+        }
+        
+        
+    }
+
+    function clos(){
+        var clo = document.getElementById('pop')
+        var corpo = document.getElementById('corpo');
+        corpo.style.overflow='auto';
+        clo.style.display='none';
+    }
+    
+
+    function ente(){
+        var clo = document.getElementById('pop')
+        var corpo = document.getElementById('corpo');
+        var s1 = document.getElementById('me1')
+        corpo.style.overflow='auto';
+        clo.style.display='none';
+        s1.innerHTML = 'Sair'
+
+    }
+
 
 </script>

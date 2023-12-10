@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body onclick="tes()">
+    <main>
+        <div class="cima">
+        </div>
+        <form action="" method="POST" class="log-in">
+            <div class="btn-conf">
+                <input type="text" name="nome" class="input" id="name">
+                <p class="p" id="p-1">nome</p>
+            </div>
+            <div class="btn-conf">
+                <input type="text" id="sobrenome" class="input">
+                <p class="p" id="p-2">sobrenome</p>
+            </div>
+            <div class="btn-conf">
+                <input type="email" id="email" class="input">
+                <p class="p" id="p-3">email</p>
+            </div>
+            <div class="btn-conf">
+                <input type="password" id="senha" class="input">
+                <p class="p" id="p-4">senha</p>
+            </div>
+            <div>
+                <button onclick="clica()"><a href="index.html">Cadastrar</a></button>
+            </div>
+        </form>
+    </main>
+    <script>
+        function tes(){
+            let nome = document.getElementById('name').value
+            let p1 = document.getElementById('p-1')
+            if (nome=='') {
+                p1.innerHTML='nome'
+            }else {
+                p1.innerHTML=''
+
+            }
+
+
+            let sobre = document.getElementById('sobrenome').value
+            let p2 = document.getElementById('p-2')
+            if (sobre=='') {
+                p2.innerHTML='sobrenome'
+            }else {
+                p2.innerHTML=''
+
+            }
+
+            let emai = document.getElementById('email').value
+            let p3 = document.getElementById('p-3')
+            if (emai=='') {
+                p3.innerHTML='email'
+            }else {
+                p3.innerHTML=''
+
+            }
+
+            let sen = document.getElementById('senha').value
+            let p4 = document.getElementById('p-4')
+            if (sen=='') {
+                p4.innerHTML='senha'
+            }else {
+                p4.innerHTML=''
+
+            }
+            
+            
+        }
+
+        function clica(){
+            window.alert('Cadastrado com sucesso!')
+        }
+    </script>
+</body>
+</html>
