@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 @keyframes animacao {
     from{margin-left:-500px}
     to{margin-left: 0px;}
@@ -294,9 +299,9 @@ FOOTER
 */
 
 .footer {
-    background-color: #262B37;
+    background-color: #20222A;
     color: white;
-    margin-top: 50px;
+    margin-top: 15px;
     padding: 30px;
     text-align: center;
 
@@ -385,6 +390,21 @@ FOOTER
     display: flex;
     justify-content: space-between;
 
+}
+
+/*AUTOR*/
+
+.autor {
+    background-color: #262B37;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.autor > div > h1 {
+    color: #1fa9c2;
+    font-size: 60px;
 }
 
 
