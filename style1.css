@@ -398,13 +398,24 @@ FOOTER
     background-color: #262B37;
     padding: 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    color: #ccc;
+
 }
 
-.autor > div > h1 {
+.autor > div > div h1 {
     color: #1fa9c2;
     font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+.autor-texto {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 
