@@ -37,12 +37,12 @@ main > div {
     padding: 20px;
 }
 
-fieldset >legend {
+fieldset > legend {
     margin: auto;
 }
 
 
-.secao> input {
+.secao > input {
     color: #20222A;
     border-width: 0px;
     outline-width: 0px;

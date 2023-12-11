@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style1.css">
 </head>
-<body id="corpo">
+<body id="corpo" onload="hide()">
     <header>
         <ul>
             <li>
@@ -51,12 +51,10 @@
         </div>
         <div class="form">
             <div class="secao">
-                <p>Selecione um baralho</p>
-                <input type="text">
                 <p>Back</p>
-                <input type="text">
+                <input type="text" id="info">
                 <p>Front</p>
-                <input type="text">
+                <input type="text" id="info-2">
                 <div>
                     <button onclick="add()">Salvar</button>
                     <button onclick="study()">Estudar</button>
@@ -187,20 +185,20 @@
                     <h1>Baralho</h1>
                 </div>
                 <div class="pala">
-                    <h2 id="p2">Palavra</h2>
+                    <h2 id="p2" style="color:black">Palavra</h2>
                 </div>
             </div>
             <div class="mean" id="sign">
                 <hr>
-                <h2 id="p">significado</h2>
+                <h2 id="pp" style="color:black">significado</h2>
             </div>
             <div class="show" id="mos">
                 <button onclick="mostar()">mostrar</button>
             </div>
             <div class="ava" id="btn">
-                <button style="background-color:cornflowerblue;" onclick="fee()">Bom</button>
-                <button style="background-color:rgb(28, 104, 245);" onclick="fee()">facil</button>
-                <button style="background-color:rgb(232, 55, 55);" onclick="fee()">dificil</button>
+                <button style="background-color:cornflowerblue;" onclick="fee()">Bom 3d</button>
+                <button style="background-color:rgb(28, 104, 245);" onclick="fee()">facil 5d</button>
+                <button style="background-color:rgb(232, 55, 55);" onclick="fee()">dificil 1d</button>
             </div>
         </div>
     </div>
@@ -283,31 +281,46 @@
 
 
         function add(){
+            window.alert('Salvo com sucesso')
             var id = document.getElementById('info').value
-            var id2 = document.getElementById('info-2').value
-            var p = document.getElementById('p')
+            var id1=document.getElementById('info-2').value
+            var p = document.getElementById('pp')
             var p1=document.getElementById('p2')
-            p.innerHTML=id2;
+            p.innerHTML=id1;
             p1.innerHTML=id;
+            var id = document.getElementById('info').value=''
+            var id1=document.getElementById('info-2').value=''
             
         }
 
         function study(){
             var all = document.getElementById('tudo5')
-            var p = document.getElementById('p')
+            var p5 = document.getElementById('p')
             var bt = document.getElementById('btn')
             var show = document.getElementById('mos')
             var bo = document.getElementById('corpo')
+            var id1=document.getElementById('info-2').value
+            var p = document.getElementById('pp').innerHTML
+            var si = document.getElementById('sign')
+            si.style.display='none'
+            p.innerHTML=id1;
             bo.style.overflow='hidden'
             show.style.display='block'
             bt.style.display='none'
-            p.style.display='none'
+            p5.style.display='none'
             all.style.display='block'
             all.style.width='100%'
             all.style.height='100vh'
             all.style.display='flex'
             all.style.justifyContent='center'
             all.style.alignItems='center'
+
+        }
+
+        function hide() {
+            var all2 = document.getElementById('tudo5')
+            all2.style.display='none';
+            
 
         }
 
