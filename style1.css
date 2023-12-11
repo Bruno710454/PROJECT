@@ -359,6 +359,7 @@ FOOTER
     justify-content: center;
     width: 100%;
     display: none;
+    position: fixed;
 }
 
 .login {
