@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="form">
-            <form action="">
+            <div class="secao">
                 <p>Selecione um baralho</p>
                 <input type="text">
                 <p>Back</p>
@@ -58,10 +58,10 @@
                 <p>Front</p>
                 <input type="text">
                 <div>
-                    <button>Salvar</button>
-                    <button>Estudar</button>
+                    <button onclick="add()">Salvar</button>
+                    <button onclick="study()">Estudar</button>
                 </div>
-            </form>
+            </div>
         </div>
     </main>
     <section>
@@ -180,7 +180,30 @@
             </div>
         </div>
     </div>
-
+    <div id="tudo5">
+        <div class="estudo">
+            <div class="ba">
+                <div class="baralho">
+                    <h1>Baralho</h1>
+                </div>
+                <div class="pala">
+                    <h2 id="p2">Palavra</h2>
+                </div>
+            </div>
+            <div class="mean" id="sign">
+                <hr>
+                <h2 id="p">significado</h2>
+            </div>
+            <div class="show" id="mos">
+                <button onclick="mostar()">mostrar</button>
+            </div>
+            <div class="ava" id="btn">
+                <button style="background-color:cornflowerblue;" onclick="fee()">Bom</button>
+                <button style="background-color:rgb(28, 104, 245);" onclick="fee()">facil</button>
+                <button style="background-color:rgb(232, 55, 55);" onclick="fee()">dificil</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -238,6 +261,55 @@
         s1.innerHTML = 'Sair'
 
     }
+
+    function mostar(){
+            var show = document.getElementById('mos')
+            var si = document.getElementById('sign')
+            var bt = document.getElementById('btn')
+            var p = document.getElementById('p')
+            p.style.display='block'
+            bt.style.display='block'
+            bt.style.display='flex'
+            mos.style.display='none'
+            si.style.display='block'
+        }
+
+        function fee(){
+            var all = document.getElementById('tudo5')
+            var bo = document.getElementById('corpo')
+            bo.style.overflow='auto'
+            all.style.display='none'
+        }
+
+
+        function add(){
+            var id = document.getElementById('info').value
+            var id2 = document.getElementById('info-2').value
+            var p = document.getElementById('p')
+            var p1=document.getElementById('p2')
+            p.innerHTML=id2;
+            p1.innerHTML=id;
+            
+        }
+
+        function study(){
+            var all = document.getElementById('tudo5')
+            var p = document.getElementById('p')
+            var bt = document.getElementById('btn')
+            var show = document.getElementById('mos')
+            var bo = document.getElementById('corpo')
+            bo.style.overflow='hidden'
+            show.style.display='block'
+            bt.style.display='none'
+            p.style.display='none'
+            all.style.display='block'
+            all.style.width='100%'
+            all.style.height='100vh'
+            all.style.display='flex'
+            all.style.justifyContent='center'
+            all.style.alignItems='center'
+
+        }
 
 
 </script>

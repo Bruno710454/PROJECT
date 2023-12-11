@@ -42,14 +42,14 @@ fieldset >legend {
 }
 
 
-form > input {
+.secao> input {
     color: #20222A;
     border-width: 0px;
     outline-width: 0px;
     padding: 5px;
 }
 
-form > div {
+.secao > div {
     display: flex;
     justify-content: space-around;
 }
@@ -133,7 +133,7 @@ header >ul {
     background-color: #54b9ca;
 }
 
-form {
+.secao {
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -418,4 +418,78 @@ FOOTER
     flex-direction: column;
 }
 
+
+/*TESTE*/
+
+
+
+button {
+    text-decoration: none;
+    outline-width: 0px;
+    border-width: 0px;
+}
+
+#tudo5 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.561);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+}
+
+
+.estudo {
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ba {
+    text-align: center;
+    height: 100px;
+}
+
+.baralho {
+    background-color:#54b9ca;
+    padding: 15px;
+}
+
+.pala {
+    margin-top: 70px;
+}
+
+.mean {
+    display: none;
+}
+
+.show {
+    background-color: aquamarine;
+    display: block;
+}
+
+.show > button {
+    padding: 20px;
+    width: 100%;
+}
+
+.ava {
+    display: flex;
+    justify-content: space-around;
+    display: none;
+}
+
+.ava >button{
+    width: 200px;
+    padding: 20px;
+}
 
